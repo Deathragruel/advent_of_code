@@ -33,6 +33,8 @@ for element in number_list:
         total = 0
         continue
 
-# greatest calory found, respective elf is 1+index because index starts at 0
-greatest_calories = max(added_numbers)
-print(f"Elf {added_numbers.index(greatest_calories) + 1} has {greatest_calories} (greatest) calories.")
+sorted_numbers = sorted(added_numbers)
+elf_total = sorted_numbers[-1] + sorted_numbers[-2] + sorted_numbers[-3]
+print(f"The top three calory elfs {added_numbers.index(sorted_numbers[-1])},", end="")
+print(f" {added_numbers.index(sorted_numbers[-2])}", end="")
+print(f" and {added_numbers.index(sorted_numbers[-3])} have total {elf_total} (greatest) calories.")
