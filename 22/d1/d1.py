@@ -33,6 +33,9 @@ for element in number_list:
         total = 0
         continue
 
+# For day 1, I just used max function with the added numbers list and used index + 1 to find the elf.
+# For day 2, I sorted the list instead and used reverse index finding to get the three elves and
+# their calories.
 sorted_numbers = sorted(added_numbers)
 elf_total = sorted_numbers[-1] + sorted_numbers[-2] + sorted_numbers[-3]
 print(f"The top three calory elfs {added_numbers.index(sorted_numbers[-1])},", end="")
